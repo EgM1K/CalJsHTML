@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Калькулятор</title>
+</head>
+<body>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+        .js-output {
+        border: 2px solid black;
+        width: 24.6%;
+        height: 60px;
+        font-size: 25px;
+        direction: ltr;
+        white-space: pre-wrap;
+        overflow: auto;
+        }   
+        .js-numbers {
+            display: grid;
+            grid-template-columns: repeat(5, auto);
+            justify-content: center;
+            gap: 5px;
+            padding: 10px;
+            border: 2px solid black;
+        }
+        .js-numbers button, .js-btn-result {
+            padding: 20px 30px;
+            font-size: 30px;
+            border: 2px solid black;
+        }
+        .js-btn-result {
+            width: 25%;
+        }
+    </style>  
+    <textarea class="js-output" readonly id="output"></textarea>
+    <div class="js-numbers">
+        <button class="js-number">1</button>
+        <button class="js-number">2</button>
+        <button class="js-number">3</button>
+        <button class="js-operation">+</button>
+        <br>
+        <button class="js-number">4</button>
+        <button class="js-number">5</button>
+        <button class="js-number">6</button>
+        <button class="js-operation">-</button>
+        <br>
+        <button class="js-number">7</button>
+        <button class="js-number">8</button>
+        <button class="js-number">9</button>
+        <button class="js-operation">*</button>
+        <br>
+        <button class="js-back">Н</button>
+        <button class="js-number">0</button>
+        <button class="js-clear">С</button>
+        <button class="js-operation">/</button>
+    </div>
+    <button class="js-btn-result">Результат</button>
+    <script src="scripttocal.js"></script>
+    <script src="callogic.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>

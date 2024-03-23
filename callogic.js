@@ -2,7 +2,9 @@ const OPERATIONS = {
     sum: '+',
     substr: '-',
     mnoj: '*',
-    delen: '/'
+    delen: '/',
+    sqrt: '√',
+    pow: '^'
 };
 function calculate(a, b, operation){
     let result = null;
@@ -19,6 +21,12 @@ function calculate(a, b, operation){
         break;
         case OPERATIONS.delen:
         result = delen(a, b);
+        break;
+        case OPERATIONS.sqrt:
+        result = sqrt(a);
+        break;
+        case OPERATIONS.pow:
+        result = pow(a, b);
         break;
     
     default:

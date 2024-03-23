@@ -16,54 +16,72 @@
             font-family: Arial, sans-serif;
         }
         .js-output {
-        border: 2px solid black;
-        width: 24.6%;
-        height: 60px;
-        font-size: 25px;
-        direction: ltr;
-        white-space: pre-wrap;
-        overflow: auto;
+            border: 2px solid black;
+            width: 24.6%;
+            height: 70px;
+            font-size: 25px;
+            direction: ltr;
+            white-space: pre-wrap;
+            overflow: auto;
         }   
         .js-numbers {
             display: grid;
             grid-template-columns: repeat(5, auto);
             justify-content: center;
-            gap: 5px;
+            gap: 15px;
             padding: 10px;
             border: 2px solid black;
         }
-        .js-numbers button, .js-btn-result {
-            padding: 20px 30px;
+        .js-numbers button {
+            padding: 15px 25px;
             font-size: 30px;
             border: 2px solid black;
+            border-radius: 50%;
         }
-        .js-btn-result {
-            width: 25%;
+        .js-numbers button.aqua{
+            background-color: aqua;
+            color: brown;
+        }
+        .js-numbers button.vanil{
+            background-color: greenyellow;
+            color: black;
+        }
+        .js-numbers button.grey {
+            background-color: rgb(88, 88, 255);
+            color: white;
+        }
+        .js-numbers button.orange {
+            background-color: rgb(254, 186, 59);
+            color: red;
         }
     </style>  
     <textarea class="js-output" readonly id="output"></textarea>
     <div class="js-numbers">
-        <button class="js-number">1</button>
-        <button class="js-number">2</button>
-        <button class="js-number">3</button>
-        <button class="js-operation">+</button>
+        <button class="js-clear vanil">C</button>
+        <button class="js-back vanil">Н</button>
+        <button class="js-number aqua">,</button>
+        <button class="js-operation orange">/</button>
         <br>
-        <button class="js-number">4</button>
-        <button class="js-number">5</button>
-        <button class="js-number">6</button>
-        <button class="js-operation">-</button>
+        <button class="js-number grey">1</button>
+        <button class="js-number grey">2</button>
+        <button class="js-number grey">3</button>
+        <button class="js-operation orange">+</button>
         <br>
-        <button class="js-number">7</button>
-        <button class="js-number">8</button>
-        <button class="js-number">9</button>
-        <button class="js-operation">*</button>
+        <button class="js-number grey">4</button>
+        <button class="js-number grey">5</button>
+        <button class="js-number grey">6</button>
+        <button class="js-operation orange">-</button>
         <br>
-        <button class="js-back">Н</button>
-        <button class="js-number">0</button>
-        <button class="js-clear">С</button>
-        <button class="js-operation">/</button>
+        <button class="js-number grey">7</button>
+        <button class="js-number grey">8</button>
+        <button class="js-number grey">9</button>
+        <button class="js-operation orange">*</button>
+        <br>
+        <button class="js-number grey">0</button>
+        <button class="js-number aqua">^</button>
+        <button class="js-operation aqua">√</button>
+        <button class="js-operation orange">=</button>
     </div>
-    <button class="js-btn-result">Результат</button>
     <script src="scripttocal.js"></script>
     <script src="callogic.js"></script>
     <script src="index.js"></script>

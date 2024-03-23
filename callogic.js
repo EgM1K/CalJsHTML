@@ -6,6 +6,32 @@ const OPERATIONS = {
     sqrt: '√',
     pow: '^'
 };
+function parseEquation(equation) {
+    let numbers = equation.split(/[\+\-\*\/]/).map(Number);
+    let operators = equation.split(/\d+/).filter(Boolean);
+    let result = numbers[0];
+
+    for (let i = 0; i < operators.length; i++) {
+        switch (operators[i]) {
+            case '+':
+                result += numbers[i + 1];
+                break;
+            case '-':
+                result -= numbers[i + 1];
+                break;
+            case '*':
+                result *= numbers[i + 1];
+                break;
+            case '/':
+                result /= numbers[i + 1];
+                break;
+            default:
+                break;
+        }
+    }
+
+    return result;
+}
 function calculate(a, b, operation){
     let result = null;
     switch(operation)
@@ -28,7 +54,6 @@ function calculate(a, b, operation){
         case OPERATIONS.pow:
         result = pow(a, b);
         break;
-    
     default:
         break;
     } 

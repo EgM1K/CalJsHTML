@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
                     let number = value.split('√')[1];
                     output.value = calculate(number, null, '√');
                 } else {
-                    output.value = eval(value);
+                    output.value = parseEquation(value);
                 }
             } else {
                 output.value += this.innerText;
